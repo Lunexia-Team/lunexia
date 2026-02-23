@@ -6,7 +6,7 @@ const source = path.join(__dirname, "source-code")
 
 app.use("/", express.static(path.join(source, "indexPage")));
 app.use("/games", express.static(path.join(source, "gamesPage")));
-app.use("/games/DTL", express.static(path.join(source, "WebGLBuild")));
+app.use("/games/DTL", express.static(path.join(source, "gamesPage", "gameSource", "DTL")));
 app.use("/sign-up", express.static(path.join(source, "signUpPage")));
 app.use("/upload", express.static(path.join(source, "uploadPage")));
 
