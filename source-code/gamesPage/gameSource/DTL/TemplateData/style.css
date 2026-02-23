@@ -2,7 +2,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f7f6;
     margin: 0;
-
+    padding: 0;
 }
 
 .navbar {
@@ -47,21 +47,62 @@ body {
     font-size: 15px;
 }
 
-.game-scene {
+.game-container-wrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding: 20px 0;
+    background-color: #1a1a1a;
 }
 
-.game-frame {
+#unity-container {
+    position: relative;
     border: 3px solid #4A8DB7;
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    background-color: #000;
+    background: #231F20;
+    overflow: hidden;
 }
 
+#unity-container.unity-desktop {
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+}
+
+#unity-canvas {
+    background: #231F20;
+    display: block;
+}
+
+#unity-loading-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#unity-logo {
+    width: 154px;
+    height: 130px;
+    background: url('unity-logo-dark.png') no-repeat center;
+}
+
+#unity-progress-bar-empty {
+    width: 141px;
+    height: 18px;
+    margin-top: 10px;
+    margin-left: 6.5px;
+    background: url('progress-bar-empty-dark.png') no-repeat center;
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 18px;
+    margin-top: 10px;
+    background: url('progress-bar-full-dark.png') no-repeat center;
+}
 
 .footer {
     background-color: #1a252f;
@@ -69,4 +110,13 @@ body {
     text-align: center;
     padding: 15px 10px;
     width: 100%;
+}
+
+#unity-container.unity-mobile {
+    position: fixed !important;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9999;
 }
