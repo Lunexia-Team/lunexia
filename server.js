@@ -11,5 +11,5 @@ app.use("/sign-up", express.static(path.join(source, "signUpPage")));
 app.use("/upload", express.static(path.join(source, "uploadPage")));
 
 app.listen(port, () => {
-    console.log(`Sunucu çalışıyor: http://localhost:${port}`);
+    console.log(`Server is working on: http://localhost:${port}`);
 });
