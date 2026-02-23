@@ -97,7 +97,5 @@ input[type="date"] {
     color: #7f8c8d;
     text-align: center;
     padding: 15px 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
