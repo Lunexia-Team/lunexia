@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Touch The Lava - Lunexia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .oyun-sahnesi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .oyun-cercevesi {
+            border: 3px solid #4A8DB7;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="ust-menu">
+        <li><a href="website.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="website.html"><i class="fa-solid fa-gamepad"></i> Games</a></li>
+        <li><a href="#" onclick="alert('Please sign up first to upload a game!'); window.location.href='kayit.html';"><i
+                    class="fa-solid fa-upload"></i> Upload Game</a></li>
+        <li><a href="kayit.html"><i class="fa-solid fa-user"></i> Sign In</a></li>
+    </ul>
+
+    <div class="hero-vitrin" style="padding: 40px 20px;">
+        <h1>Don't Touch The Lava</h1>
+        <p>You can use the button in the bottom right corner to make the game full screen!</p>
+    </div>
+
+    <div class="oyun-sahnesi">
+        <iframe class="oyun-cercevesi" src="../WebGLBuild/index.html" width="960" height="645" scrolling="no"
+            allowfullscreen="true"></iframe>
+    </div>
+
+    <div class="alt-bilgi">
+        <p>&copy; 2026 Lunexia - All rights reserved.</p>
+    </div>
+
+</body>
+
+</html>
