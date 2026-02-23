@@ -1,7 +1,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f7f6;
-    margin: auto;
+    margin: 0;
+
 }
 
 .navbar {
@@ -20,7 +21,7 @@ body {
 
 .navbar li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 30px;
 }
 
 .navbar li a {
@@ -46,51 +47,21 @@ body {
     font-size: 15px;
 }
 
-.form-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border: 2px solid #4A8DB7;
-    border-radius: 20px;
-    margin: 50px auto;
-    padding: 40px;
-    width: 400px;
+.game-scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-td {
-    padding: 8px;
-    font-weight: bold;
-    color: #555;
+.game-frame {
+    border: 3px solid #4A8DB7;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #000;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    max-width: 400px;
-}
-
-.form-button {
-    background-color: #4A8DB7;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.form-button:hover {
-    background-color: #356a8d;
-}
-
-.button-container {
-    text-align: center;
-}
 
 .footer {
     background-color: #1a252f;

@@ -20,7 +20,7 @@ body {
 
 .navbar li {
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 30px;
 }
 
 .navbar li a {
@@ -55,12 +55,6 @@ body {
     width: 400px;
 }
 
-.form-container h3 {
-    text-align: center;
-    color: #4A8DB7;
-    margin-bottom: 20px;
-}
-
 td {
     padding: 8px;
     font-weight: bold;
@@ -68,27 +62,15 @@ td {
 }
 
 input[type="text"],
-select,
-textarea {
+input[type="email"],
+input[type="password"],
+input[type="date"] {
     width: 100%;
     padding: 8px;
     border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     max-width: 400px;
-}
-
-.info-link {
-    display: block;
-    font-size: 12px;
-    color: #4A8DB7;
-    text-decoration: none;
-    margin-top: 5px;
-    cursor: pointer;
-}
-
-.info-link:hover {
-    text-decoration: underline;
 }
 
 .form-button {
