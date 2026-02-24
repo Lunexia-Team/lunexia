@@ -55,6 +55,14 @@ body {
     background-color: #1a1a1a;
 }
 
+.footer {
+    background-color: #1a252f;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 15px 10px;
+    width: 100%;
+}
+
 #unity-container {
     position: relative;
     border: 3px solid #4A8DB7;
@@ -102,14 +110,6 @@ body {
     height: 18px;
     margin-top: 10px;
     background: url('progress-bar-full-dark.png') no-repeat center;
-}
-
-.footer {
-    background-color: #1a252f;
-    color: #7f8c8d;
-    text-align: center;
-    padding: 15px 10px;
-    width: 100%;
 }
 
 #unity-container.unity-mobile {
