@@ -134,3 +134,90 @@ body {
     padding: 15px 10px;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5px;
+    }
+
+    .navbar li {
+        display: inline-block;
+        padding: 5px 10px;
+    }
+
+    .navbar li a {
+        font-size: 22px;
+    }
+
+    .game-card {
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+        max-width: 350px;
+    }
+
+    .game-card:hover {
+        transform: scale(1.05);
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar li a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+    .navbar li a i {
+        margin-right: 5px;
+    }
+
+    .navbar li:last-child {
+        border-bottom: none;
+    }
+
+    .game-title h2 {
+        font-size: 1.2rem;
+    }
+
+    .card-content h3 {
+        font-size: 18px;
+    }
+}
