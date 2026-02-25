@@ -108,6 +108,7 @@
         formData.append('file', gameFile.value);
         formData.append('image', coverImage.value);
         formData.append('description', description.value);
+
         alert('The game has been successfully delivered!\nYou will be contacted via email within 1-7 days.');
     };
 </script>
