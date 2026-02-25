@@ -9,8 +9,7 @@
         </ul>
     </div>
     <div class="hero">
-        <i class="fa-solid fa-vr-cardboard hero-ikon"></i>
-        <h1>Welcome to Lunexia</h1>
+        <h1>Welcome to Lunexia!</h1>
         <p>Play the best games, explore new worlds, or upload your own creation to the community.</p>
         <a href="/sign-up" class="hero-button">Join the Community</a>
     </div>
