@@ -2,15 +2,15 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = 3000;
-const public = path.join(__dirname, "public")
 
-app.use("/", express.static(path.join(public, "indexPage")));
-app.use("/games", express.static(path.join(public, "gamesPage")));
-app.use("/games/DTL", express.static(path.join(public, "gamesPage", "gameSource", "DTL")));
-app.use("/games/ES", express.static(path.join(public, "gamesPage", "gameSource", "ES")));
-app.use("/sign-up", express.static(path.join(public, "signUpPage")));
-app.use("/upload", express.static(path.join(public, "uploadPage")));
+const gamesPath = path.join(__dirname, "source-code", "app", "public", "gameSource");
+const distPath = path.join(__dirname, "source-code", "app", "dist");
 
-app.listen(port, () => {
-    console.log(`Server is working on: http://localhost:${port}`);
-});
+app.use("/games/DTL", express.static(path.join(gamesPath, "DTL")));
+app.use("/games/ES", express.static(path.join(gamesPath, "ES")));
+
+app.use(express.static(distPath));
+
+app.use((req, res) => { res.sendFile(path.join(distPath, "index.html")); });
+
+app.listen(port, () => { console.log(`Server is working on: http://localhost:${port}`); });
