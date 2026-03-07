@@ -7,7 +7,7 @@ const gamesPath = path.join(__dirname, "source-code", "app", "public", "gameSour
 const distPath = path.join(__dirname, "source-code", "app", "dist");
 
 app.use("/games/DTL", express.static(path.join(gamesPath, "DTL")));
-app.use("/games/ES", express.static(path.join(gamesPath, "ES")));
+app.use("/games/AT", express.static(path.join(gamesPath, "AT")));
 
 app.use(express.static(distPath));
 
