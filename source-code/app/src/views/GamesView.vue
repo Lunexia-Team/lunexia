@@ -13,18 +13,18 @@
             </div>
             <div class="card-content">
                 <h3>Don't Touch The Lava!</h3>
-                <p>Rating: ⭐️⭐️⭐️⭐️⭐️</p>
+                <p>Rating: ⭐️⭐️⭐️⭐️</p>
                 <a href="/games/DTL" class="button">Play Now</a>
             </div>
         </div>
         <div class="game-card">
             <div class="card-image">
-                <i class="fa-solid fa-chess-knight"></i>
+                <img width="300px" height="160px" src="../assets/AT.png" alt="Anti-Torenk">
             </div>
             <div class="card-content">
-                <h3>Empire Strategy</h3>
-                <p>Rating: ⭐️⭐️⭐️⭐️</p>
-                <a href="/games/ES" class="button">Play Now</a>
+                <h3>Anti-Torenk</h3>
+                <p>Rating: ⭐️⭐️⭐️⭐️⭐️</p>
+                <a href="/games/AT" class="button">Play Now</a>
             </div>
         </div>
     </div>
