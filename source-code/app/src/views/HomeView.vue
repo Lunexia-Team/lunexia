@@ -22,7 +22,7 @@
     import HeroSection from '@/components/HeroSection.vue';
 </script>
 
-<style>
+<style scoped>
     .page {
         text-align: center;
         min-height: 65vh;

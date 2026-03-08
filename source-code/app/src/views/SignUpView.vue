@@ -45,6 +45,7 @@
 
 <script setup>
     import HeroSection from '@/components/HeroSection.vue';
+    import axios from 'axios';
     import { ref } from 'vue';
 
     const firstName = ref('');
@@ -54,27 +55,39 @@
     const password = ref('');
     const birthDate = ref(null);
 
-    const createAccount = () => {
-
+    const createAccount = async () => {
         if (!firstName.value || !lastName.value || !username.value || !email.value || !password.value || !birthDate.value) {
-            alert('Please fill in the required fields (First Name, Last Name, Username, Email, Password, Date of Birth)!');
+            alert('Lütfen tüm alanları doldurun!');
             return;
         }
 
-        const tableData = new FormData();
-        tableData.append('first name', firstName.value);
-        tableData.append('last name', lastName.value);
-        tableData.append('username', username.value);
-        tableData.append('email', email.value);
-        tableData.append('password', password.value);
-        tableData.append('birthDate', birthDate.value);
+        const userData = {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            username: username.value,
+            email: email.value,
+            password: password.value,
+            birthDate: birthDate.value
+        };
 
-        alert('The account has been successfully created!')
+        try {
+            const response = await axios.post('http://localhost:3000/api/signup', userData);
+            alert('Hesap başarıyla oluşturuldu!');
+            console.log("Sunucu yanıtı:", response.data);
+        } catch (error) {
+            if (error.response) {
+                console.error("Hata Verisi:", error.response.data);
+                alert(error.response.data.error || "Bir hata oluştu.");
+            }
+            else {
+                console.error("Bağlantı Hatası:", error.message);
+                alert("Sunucuya bağlanılamadı. Lütfen backend'in çalıştığından emin olun.");
+            }
+        }
     }
-
 </script>
 
-<style>
+<style scoped>
     .form-container {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         border: 2px solid #4A8DB7;

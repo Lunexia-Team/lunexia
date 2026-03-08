@@ -100,7 +100,7 @@
     };
 </script>
 
-<style>
+<style scoped>
     .form-container {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         border: 2px solid #4A8DB7;
