@@ -5,6 +5,8 @@ const path = require("path");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/auth");
 
+const port = 3000;
+
 const app = express();
 
 connectDB();
@@ -27,5 +29,4 @@ app.use((req, res, next) => {
     }
 });
 
-const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`🚀 Server: http://localhost:${port}`));
