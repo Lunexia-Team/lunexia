@@ -72,7 +72,7 @@
 
         try {
             const API_URL = 'https://lunexia.onrender.com'
-            const response = await axios.post(`${API_URL}/api/signin`, userData);
+            const response = await axios.post(`${API_URL}/api/signup`, userData);
             alert('Account created successfully!');
             console.log("Server response:", response.data);
         } catch (error) {
