@@ -1,8 +1,8 @@
 <template>
-    <div class="hero">
+    <HeroSection>
         <h1>Join Us</h1>
         <p>Create your developer account and join our community.</p>
-    </div>
+    </HeroSection>
     <div class="form-container">
         <h3>Create New Account</h3>
         <table>
@@ -44,6 +44,7 @@
 </template>
 
 <script setup>
+    import HeroSection from '@/components/HeroSection.vue';
     import { ref } from 'vue';
 
     const firstName = ref('');
@@ -74,31 +75,6 @@
 </script>
 
 <style>
-    * {
-
-        box-sizing: border-box;
-
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #f4f7f6;
-        margin: auto;
-    }
-
-    .hero {
-        border-bottom: 6px solid #4A8DB7;
-        background-color: #2c3e50;
-        text-align: center;
-        color: white;
-        padding: 20px;
-    }
-
-    .hero p {
-        color: #b0bec5;
-        font-size: 15px;
-    }
-
     .form-container {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         border: 2px solid #4A8DB7;
@@ -147,19 +123,6 @@
 
     @media (max-width: 768px) {
 
-        .navbar {
-            padding: 15px 5px;
-        }
-
-        .navbar li {
-            display: inline-block;
-            padding: 5px 10px;
-        }
-
-        .navbar li a {
-            font-size: 22px;
-        }
-
         .form-container {
             width: 85%;
             max-width: 500px;
@@ -194,54 +157,9 @@
         .button-container {
             padding-top: 15px;
         }
-
-        .hero h1 {
-            font-size: 22px;
-        }
-
-        .hero p {
-            font-size: 14px;
-            padding: 0 10px;
-        }
     }
 
     @media (max-width: 480px) {
-
-        .navbar {
-            width: 100%;
-            padding: 5px 0;
-        }
-
-        .navbar ul {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        .navbar li {
-            display: block;
-            width: 100%;
-            padding: 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar li a {
-            display: block;
-            width: 100%;
-            padding: 8px 0;
-            font-size: 14px;
-            line-height: 1.2;
-        }
-
-        .navbar li a i {
-            margin-right: 5px;
-        }
-
-        .navbar li:last-child {
-            border-bottom: none;
-        }
 
         .form-container h3 {
             font-size: 18px;
