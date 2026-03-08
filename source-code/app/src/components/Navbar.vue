@@ -5,6 +5,7 @@
             <li><router-link to="/games"><i class="fa-solid fa-gamepad"></i> Games</router-link></li>
             <li><router-link to="/upload"><i class="fa-solid fa-upload"></i> Upload Game</router-link></li>
             <li><router-link to="/signup"><i class="fa-solid fa-user"></i> Sign Up</router-link></li>
+            <li><router-link to="/signin"><i class="fa-solid fa-user"></i> Sign In</router-link></li>
         </ul>
     </div>
 </template>

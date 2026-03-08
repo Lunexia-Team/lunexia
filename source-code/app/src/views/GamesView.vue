@@ -34,7 +34,7 @@
     import HeroSection from '@/components/HeroSection.vue';
 </script>
 
-<style>
+<style scoped>
     .game-title {
         text-align: center;
         font-size: 20px;
