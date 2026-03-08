@@ -37,7 +37,8 @@
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/api/signin', {
+            const API_URL = 'https://lunexia.onrender.com'
+            const response = await axios.post(`${API_URL}/api/signin`, {
                 email: email.value,
                 password: password.value
             });

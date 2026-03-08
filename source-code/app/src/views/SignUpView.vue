@@ -57,7 +57,7 @@
 
     const createAccount = async () => {
         if (!firstName.value || !lastName.value || !username.value || !email.value || !password.value || !birthDate.value) {
-            alert('Lütfen tüm alanları doldurun!');
+            alert('Please fill in all the fields!');
             return;
         }
 
@@ -71,17 +71,18 @@
         };
 
         try {
-            const response = await axios.post('http://localhost:3000/api/signup', userData);
-            alert('Hesap başarıyla oluşturuldu!');
-            console.log("Sunucu yanıtı:", response.data);
+            const API_URL = 'https://lunexia.onrender.com'
+            const response = await axios.post(`${API_URL}/api/signin`, userData);
+            alert('Account created successfully!');
+            console.log("Server response:", response.data);
         } catch (error) {
             if (error.response) {
-                console.error("Hata Verisi:", error.response.data);
-                alert(error.response.data.error || "Bir hata oluştu.");
+                console.error("Error Data:", error.response.data);
+                alert(error.response.data.error || "An error occurred.");
             }
             else {
-                console.error("Bağlantı Hatası:", error.message);
-                alert("Sunucuya bağlanılamadı. Lütfen backend'in çalıştığından emin olun.");
+                console.error("Connection Error:", error.message);
+                alert("Could not connect to the server.");
             }
         }
     }
