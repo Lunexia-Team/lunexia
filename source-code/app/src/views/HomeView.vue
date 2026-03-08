@@ -1,9 +1,9 @@
 <template>
-    <div class="hero">
+    <HeroSection>
         <h1>Welcome to Lunexia!</h1>
         <p>Play the best games, explore new worlds, or upload your own creation to the community.</p>
-        <router-link to="/signup" class="hero-button">Join the Community</router-link>
-    </div>
+        <button class="hero-button" @click="$router.push('/signup')">Join the Community</button>
+    </HeroSection>
     <div class="page">
         <router-link to="/games" class="card">
             <i class="fa-solid fa-gamepad"></i>
@@ -18,48 +18,11 @@
     </div>
 </template>
 
+<script setup>
+    import HeroSection from '@/components/HeroSection.vue';
+</script>
+
 <style>
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #f4f7f6;
-        margin: auto;
-    }
-
-    .hero {
-        border-bottom: 6px solid #4A8DB7;
-        background-color: #2c3e50;
-        text-align: center;
-        color: white;
-        padding: 20px;
-    }
-
-    .hero p {
-        color: #b0bec5;
-        font-size: 15px;
-    }
-
-    .hero-button {
-        background-color: #4A8DB7;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: bold;
-        color: white;
-        margin: 10px;
-        padding: 10px 25px;
-        border-radius: 5px;
-        font-size: 13px;
-    }
-
-    .hero-button:hover {
-        background-color: white;
-        color: #4A8DB7;
-        transition: 0.3s;
-    }
-
     .page {
         text-align: center;
         min-height: 65vh;
@@ -113,20 +76,6 @@
     }
 
     @media (max-width: 768px) {
-
-        .navbar {
-            padding: 15px 5px;
-        }
-
-        .navbar li {
-            display: inline-block;
-            padding: 5px 10px;
-        }
-
-        .navbar li a {
-            font-size: 22px;
-        }
-
         .card {
             width: 90%;
             margin: 20px auto;
@@ -141,55 +90,9 @@
         .card h2 {
             font-size: 24px;
         }
-
-        .hero h1 {
-            font-size: 22px;
-        }
-
-        .hero p {
-            font-size: 14px;
-            padding: 0 10px;
-        }
     }
 
     @media (max-width: 480px) {
-
-        .navbar {
-            width: 100%;
-            padding: 5px 0;
-        }
-
-        .navbar ul {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        .navbar li {
-            display: block;
-            width: 100%;
-            padding: 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar li a {
-            display: block;
-            width: 100%;
-            padding: 8px 0;
-            font-size: 14px;
-            line-height: 1.2;
-        }
-
-        .navbar li a i {
-            margin-right: 5px;
-        }
-
-        .navbar li:last-child {
-            border-bottom: none;
-        }
-
         .page {
             margin-top: 30px;
             margin-bottom: 30px;
