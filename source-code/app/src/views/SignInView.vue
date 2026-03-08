@@ -17,7 +17,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" class="button-container">
-                        <button @click="handleLogin" class="form-button">Sıgn In</button>
+                        <button @click="handleLogin" class="form-button">Sign In</button>
                     </td>
                 </tr>
             </tbody>
