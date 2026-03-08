@@ -44,7 +44,7 @@
             });
 
             if (response.status === 200) {
-                alert('Login successful! Welcome' + response.data.user.username);
+                alert('Login successful! Welcome ' + response.data.user.username);
                 localStorage.setItem('user', JSON.stringify(response.data.user));
                 router.push('/');
             }
