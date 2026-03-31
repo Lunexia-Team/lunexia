@@ -34,17 +34,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Game File (.zip):</td>
+                        <td>Game File Link (Google Drive):</td>
                         <td>
-                            <input type="file" accept=".zip" @change="handleFileChange">
+                            <input v-model="gameFileLink" type="text" placeholder="Paste Google Drive link here">
                             <a class="info-link" id="pdfAcBtn" @click="openGuide">
                                 <i class="fa-solid fa-circle-info"></i> How to upload? View Guide (PDF)
                             </a>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>Cover Image:</td>
-                        <td><input type="file" accept="image/*" @change="handleImageChange"></td>
                     </tr>
                     <tr>
                         <td colspan="2">
@@ -71,21 +67,10 @@
 
     const gameTitle = ref('');
     const category = ref('');
-    const gameFile = ref(null);
-    const coverImage = ref(null);
+    const gameFileLink = ref('');
     const description = ref('');
 
     const API_URL = 'https://project-lunexia.onrender.com';
-
-    // Function to handle file input changes
-    const handleFileChange = (event) => {
-        gameFile.value = event.target.files[0];
-    };
-
-    // Function to handle cover image input changes
-    const handleImageChange = (event) => {
-        coverImage.value = event.target.files[0];
-    };
 
     // Function to open the PDF guide in a new tab
     const openGuide = () => {
@@ -95,12 +80,31 @@
     // Function to handle game upload
     const handleUpload = async () => {
 
-        if (!gameTitle.value || !category.value || !gameFile.value || !coverImage.value) {
+        if (!gameTitle.value || !category.value || !gameFileLink.value) {
             alert('Please fill in the required fields!');
             return;
         }
+        try {
+            const gameData = {
+                title: gameTitle.value,
+                category: category.value,
+                gameFileLink: gameFileLink.value,
+                description: description.value
+            };
 
-        alert("Upload Successful! Your game will be reviewed and published within 24-48 hours.");
+            const response = await axios.post(`${API_URL}/api/upload`, gameData);
+
+            if (response.status === 201 || response.status === 200) {
+                alert("Upload successful!\nYour game will be published within 24-48 hours after review.");
+                gameTitle.value = '';
+                category.value = '';
+                gameFileLink.value = '';
+                description.value = '';
+            }
+        } catch (error) {
+            console.error('Upload error: ', error);
+            alert('An error occurred while uploading the game. Please try again later.');
+        }
     };
 </script>
 

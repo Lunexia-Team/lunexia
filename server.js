@@ -1,3 +1,5 @@
+// ? Main server file for the project
+
 // * requirements
 require('dotenv').config({ quiet: true });
 const express = require("express");
@@ -17,11 +19,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // * routes for sign up, sign in and game upload 
-const authRoutes = require("./routes/authRoutes.js");
-const gameRoutes = require('./routes/gameRoutes.js');
+const signInRoutes = require("./routes/signInRoutes.js");
+const signUpRoutes = require("./routes/signUpRoutes.js");
+const uploadRoutes = require('./routes/uploadRoutes.js');
 
-app.use("/api", authRoutes);
-app.use('/api/games', gameRoutes);
+app.use("/api/signin", signInRoutes);
+app.use("/api/signup", signUpRoutes);
+app.use('/api/upload', uploadRoutes);
 
 // * static files for Vue app and game source files
 const distPath = path.join(__dirname, "source-code", "app", "dist");

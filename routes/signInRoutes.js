@@ -1,4 +1,4 @@
-// ? Authentication routes for user sign up and sign in
+// ? Authentication routes for user sign in
 
 // * Requirements
 const express = require("express");
@@ -8,21 +8,8 @@ const User = require("../models/userModel");
 // * Shortcut
 const router = express.Router();
 
-// * Sign Up Route
-router.post("/signup", async (req, res) => {
-    try {
-        const { password, ...userData } = req.body;
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ ...userData, password: hashedPassword });
-        await newUser.save();
-        res.status(201).json({ message: "User created successfully!" });
-    } catch (error) {
-        res.status(400).json({ error: "The email address or username has already been taken." });
-    }
-});
-
 // * Sign In Route
-router.post("/signin", async (req, res) => {
+router.post("/", async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = await User.findOne({ email });
@@ -35,5 +22,5 @@ router.post("/signin", async (req, res) => {
     }
 });
 
-// * Export the auth routes for use in other files
+// * Export the sign in routes for use in other files
 module.exports = router;
