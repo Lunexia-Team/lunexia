@@ -1,3 +1,6 @@
+<!-- Home View component -->
+
+<!-- HTML part -->
 <template>
     <HeroSection>
         <h1>Welcome to Lunexia!</h1>
@@ -18,10 +21,12 @@
     </div>
 </template>
 
+<!-- JavaScript part -->
 <script setup>
     import HeroSection from '@/components/HeroSection.vue';
 </script>
 
+<!-- CSS part -->
 <style scoped>
     .page {
         text-align: center;
@@ -75,6 +80,7 @@
         color: white;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
         .card {
             width: 90%;

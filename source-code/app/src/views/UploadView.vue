@@ -1,3 +1,6 @@
+<!-- Upload View component -->
+
+<!-- HTML part -->
 <template>
     <HeroSection>
         <h1>Upload Your Game</h1>
@@ -60,9 +63,11 @@
     </div>
 </template>
 
+<!-- JavaScript part -->
 <script setup>
     import HeroSection from '@/components/HeroSection.vue';
     import { ref } from 'vue';
+    import axios from 'axios';
 
     const gameTitle = ref('');
     const category = ref('');
@@ -70,36 +75,36 @@
     const coverImage = ref(null);
     const description = ref('');
 
+    const API_URL = 'https://project-lunexia.onrender.com';
+
+    // Function to handle file input changes
     const handleFileChange = (event) => {
         gameFile.value = event.target.files[0];
     };
 
+    // Function to handle cover image input changes
     const handleImageChange = (event) => {
         coverImage.value = event.target.files[0];
     };
 
+    // Function to open the PDF guide in a new tab
     const openGuide = () => {
         window.open('/lunexiagameupload.pdf', '_blank');
     };
 
-    const handleUpload = () => {
+    // Function to handle game upload
+    const handleUpload = async () => {
 
         if (!gameTitle.value || !category.value || !gameFile.value || !coverImage.value) {
-            alert('Please fill in the required fields (Title, Category, File, Cover Image)!');
+            alert('Please fill in the required fields!');
             return;
         }
 
-        const formData = new FormData();
-        formData.append('title', gameTitle.value);
-        formData.append('category', category.value);
-        formData.append('file', gameFile.value);
-        formData.append('image', coverImage.value);
-        formData.append('description', description.value);
-
-        alert('The game has been successfully delivered!\nYou will be contacted via email within 1-7 days.');
+        alert("Upload Successful! Your game will be reviewed and published within 24-48 hours.");
     };
 </script>
 
+<!-- CSS part -->
 <style scoped>
     .form-container {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -177,6 +182,7 @@
         text-align: center;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
 
         .form-container {

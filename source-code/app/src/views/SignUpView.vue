@@ -1,3 +1,6 @@
+<!-- Sign Up View component -->
+
+<!-- HTML part -->
 <template>
     <HeroSection>
         <h1>Join Us</h1>
@@ -43,6 +46,7 @@
     </div>
 </template>
 
+<!-- JavaScript part -->
 <script setup>
     import HeroSection from '@/components/HeroSection.vue';
     import axios from 'axios';
@@ -55,6 +59,9 @@
     const password = ref('');
     const birthDate = ref(null);
 
+    const API_URL = 'https://project-lunexia.onrender.com';
+
+    // Function to handle account creation
     const createAccount = async () => {
         if (!firstName.value || !lastName.value || !username.value || !email.value || !password.value || !birthDate.value) {
             alert('Please fill in all the fields!');
@@ -71,7 +78,6 @@
         };
 
         try {
-            const API_URL = 'https://project-lunexia.onrender.com'
             const response = await axios.post(`${API_URL}/api/signup`, userData);
             alert('Account created successfully!');
             console.log("Server response:", response.data);
@@ -88,6 +94,7 @@
     }
 </script>
 
+<!-- CSS part -->
 <style scoped>
     .form-container {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -135,6 +142,7 @@
         text-align: center;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
 
         .form-container {

@@ -1,8 +1,14 @@
-const express = require("express");
-const router = express.Router();
-const bcrypt = require("bcryptjs");
-const User = require("../models/user");
+// ? Authentication routes for user sign up and sign in
 
+// * Requirements
+const express = require("express");
+const bcrypt = require("bcryptjs");
+const User = require("../models/userModel");
+
+// * Shortcut
+const router = express.Router();
+
+// * Sign Up Route
 router.post("/signup", async (req, res) => {
     try {
         const { password, ...userData } = req.body;
@@ -15,6 +21,7 @@ router.post("/signup", async (req, res) => {
     }
 });
 
+// * Sign In Route
 router.post("/signin", async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -28,4 +35,5 @@ router.post("/signin", async (req, res) => {
     }
 });
 
+// * Export the auth routes for use in other files
 module.exports = router;

@@ -1,3 +1,6 @@
+<!-- Hero Section component -->
+
+<!-- HTML part -->
 <template>
     <div class="hero">
         <slot>
@@ -8,10 +11,10 @@
     </div>
 </template>
 
-<script setup>
+<!-- JavaScript part -->
+<script setup></script>
 
-</script>
-
+<!-- CSS part -->
 <style>
     .hero {
         border-bottom: 6px solid #4A8DB7;
@@ -52,6 +55,7 @@
         transform: scale(0.97);
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
 
         .hero h1 {

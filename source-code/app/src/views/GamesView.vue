@@ -1,3 +1,6 @@
+<!-- Games View component -->
+
+<!-- HTML part -->
 <template>
     <HeroSection>
         <h1>Games Collection</h1>
@@ -30,10 +33,12 @@
     </div>
 </template>
 
+<!-- JavaScript part -->
 <script setup>
     import HeroSection from '@/components/HeroSection.vue';
 </script>
 
+<!-- CSS part -->
 <style scoped>
     .game-title {
         text-align: center;
@@ -111,6 +116,7 @@
         color: white;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
 
         .game-card {
