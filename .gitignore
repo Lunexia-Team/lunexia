@@ -1,2 +1,7 @@
+# Do not upload this files and folders to Github.
+
+# As they contain sensitive information (.env) and
+# dependencies (node_modules) that can be installed via "npm install".
+
 node_modules/
 .env

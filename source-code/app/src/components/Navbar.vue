@@ -1,3 +1,6 @@
+<!-- Navbar component -->
+
+<!-- HTML part -->
 <template>
     <div class="navbar">
         <ul>
@@ -10,6 +13,10 @@
     </div>
 </template>
 
+<!-- JavaScript part -->
+<script setup></script>
+
+<!-- CSS part -->
 <style scoped>
     .navbar {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -56,6 +63,7 @@
         }
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 480px) {
         .navbar {
             width: 100%;

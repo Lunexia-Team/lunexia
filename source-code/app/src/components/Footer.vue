@@ -1,7 +1,9 @@
+<!-- Footer component -->
+
+<!-- HTML part -->
 <template>
     <footer class="footer">
         <h3 class="footer-title">Project Owners</h3>
-
         <div class="footer-team">
             <div class="member">
                 <span>Güray Topağaç</span>
@@ -9,7 +11,6 @@
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
-
             <div class="member">
                 <span>Mehmet Emin Yıldırım</span>
                 <a href="https://www.instagram.com/mehmet.emin_yldrm/" target="_blank">
@@ -17,13 +18,16 @@
                 </a>
             </div>
         </div>
-
         <div class="footer-copy">
             <p>© 2026 Lunexia - All rights reserved.</p>
         </div>
     </footer>
 </template>
 
+<!-- JavaScript part -->
+<script setup></script>
+
+<!-- CSS part -->
 <style scoped>
     .footer {
         background-color: #1a252f;
@@ -91,6 +95,7 @@
         letter-spacing: 1px;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
         .footer-title {
             font-size: 13px;

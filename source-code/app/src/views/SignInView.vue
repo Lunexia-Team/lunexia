@@ -1,3 +1,6 @@
+<!-- Sign In View component -->
+
+<!-- HTML part -->
 <template>
     <HeroSection>
         <h1>Sign In</h1>
@@ -25,6 +28,7 @@
     </div>
 </template>
 
+<!-- JavaScript part -->
 <script setup>
     import HeroSection from '@/components/HeroSection.vue';
     import { ref } from 'vue';
@@ -35,9 +39,11 @@
     const password = ref('');
     const router = useRouter();
 
+    const API_URL = 'https://project-lunexia.onrender.com'
+
+    // Function to handle login
     const handleLogin = async () => {
         try {
-            const API_URL = 'https://project-lunexia.onrender.com'
             const response = await axios.post(`${API_URL}/api/signin`, {
                 email: email.value,
                 password: password.value
@@ -54,6 +60,7 @@
     };
 </script>
 
+<!-- CSS part -->
 <style scoped>
     .form-container {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -105,6 +112,7 @@
         padding-top: 20px;
     }
 
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
         .form-container {
             width: 85%;
