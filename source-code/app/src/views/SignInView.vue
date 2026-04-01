@@ -39,7 +39,7 @@
     const password = ref('');
     const router = useRouter();
 
-    const API_URL = 'https://project-lunexia.onrender.com';
+    const API_URL = 'http://localhost:3000';
 
     // Function to handle login
     const handleLogin = async () => {
@@ -50,9 +50,9 @@
             });
 
             if (response.status === 200) {
-                alert('Login successful! Welcome ' + response.data.user.username);
                 localStorage.setItem('user', JSON.stringify(response.data.user));
-                router.push('/');
+                localStorage.setItem('activeUsername', response.data.user.username);
+                router.push('/profile');
             }
         } catch (error) {
             alert(error.response?.data?.error || 'Login failed. Please check your information.');

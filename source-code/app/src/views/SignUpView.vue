@@ -25,6 +25,18 @@
                 </tr>
 
                 <tr>
+                    <td>Role:</td>
+                    <td>
+                        <select v-model="role">
+                            <option value="" disabled>Select Role</option>
+                            <option value="Gamer">Gamer</option>
+                            <option value="Game Developer">Game Developer</option>
+                            <option value="Gamer / Game Developer">Gamer / Game Developer</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
                     <td>Email Address:</td>
                     <td><input v-model="email" type="email" placeholder="example@gmail.com"></td>
                 </tr>
@@ -55,6 +67,7 @@
     const firstName = ref('');
     const lastName = ref('');
     const username = ref('');
+    const role = ref('');
     const email = ref('');
     const password = ref('');
     const birthDate = ref(null);
@@ -63,7 +76,7 @@
 
     // Function to handle account creation
     const createAccount = async () => {
-        if (!firstName.value || !lastName.value || !username.value || !email.value || !password.value || !birthDate.value) {
+        if (!firstName.value || !lastName.value || !username.value || !role.value || !email.value || !password.value || !birthDate.value) {
             alert('Please fill in all the fields!');
             return;
         }
@@ -72,6 +85,7 @@
             firstName: firstName.value,
             lastName: lastName.value,
             username: username.value,
+            role: role.value,
             email: email.value,
             password: password.value,
             birthDate: birthDate.value
@@ -80,7 +94,7 @@
         try {
             const response = await axios.post(`${API_URL}/api/signup`, userData);
             alert('Account created successfully!');
-            console.log("Server response:", response.data);
+            router.push('/signin');
         } catch (error) {
             if (error.response) {
                 console.error("Error Data:", error.response.data);
@@ -114,7 +128,8 @@
     input[type="text"],
     input[type="email"],
     input[type="password"],
-    input[type="date"] {
+    input[type="date"],
+    select {
         width: 100%;
         padding: 8px;
         border: 2px solid #ccc;

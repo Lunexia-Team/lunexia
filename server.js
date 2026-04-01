@@ -18,14 +18,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// * routes for sign up, sign in and game upload 
+// * routes
 const signUpRoutes = require("./routes/signUpRoutes.js");
 const signInRoutes = require("./routes/signInRoutes.js");
 const uploadRoutes = require('./routes/uploadRoutes.js');
+const userRoutes = require('./routes/userRoutes.js');
 
 app.use("/api/signup", signUpRoutes);
 app.use("/api/signin", signInRoutes);
-app.use('/api/upload', uploadRoutes);
+app.use("/api/upload", uploadRoutes);
+app.use("/api/users", userRoutes);
 
 // * static files for Vue app and game source files
 const distPath = path.join(__dirname, "source-code", "app", "dist");
