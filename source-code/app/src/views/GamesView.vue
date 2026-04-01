@@ -3,32 +3,50 @@
 <!-- HTML part -->
 <template>
     <HeroSection>
-        <h1>Games Collection</h1>
+        <h1>Explore Games</h1>
         <p>Discover trending games or find your next favorite adventure.</p>
     </HeroSection>
-    <div class="game-title">
-        <h2>Games</h2>
-    </div>
-    <div class="game-card-container">
-        <div class="game-card">
-            <div class="card-image">
-                <img width="300px" height="160px" src="../assets/DTL.jpg" alt="Don't Touch The Lava">
+
+    <div class="page">
+        <div class="games">
+            <div class="game-card">
+                <div class="card-image">
+                    <img src="../assets/DTL.jpg" alt="Don't Touch The Lava">
+                    <div class="card-button">
+                        <a href="/games/DTL" class="playButton">Play Now</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Don't Touch The Lava!</h3>
+                    <div class="card-footer">
+                        <span class="stars">⭐️⭐️⭐️⭐️</span>
+                        <span class="tag">Hardcore Obby</span>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <h3>Don't Touch The Lava!</h3>
-                <p>Rating: ⭐️⭐️⭐️⭐️</p>
-                <a href="/games/DTL" class="button">Play Now</a>
+
+            <div class="game-card">
+                <div class="card-image">
+                    <img src="../assets/AT.png" alt="Anti-Torenk">
+                    <div class="card-button">
+                        <a href="/games/AT" class="playButton">Play Now</a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Anti-Torenk</h3>
+                    <div class="card-footer">
+                        <span class="stars">⭐️⭐️⭐️⭐️⭐️</span>
+                        <span class="tag">Minigames</span>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="game-card">
-            <div class="card-image">
-                <img width="300px" height="160px" src="../assets/AT.png" alt="Anti-Torenk">
-            </div>
-            <div class="card-content">
-                <h3>Anti-Torenk</h3>
-                <p>Rating: ⭐️⭐️⭐️⭐️⭐️</p>
-                <a href="/games/AT" class="button">Play Now</a>
-            </div>
+
+            <button class="upload-card" @click="$router.push('/upload')">
+                <div class="upload-content">
+                    <div class="plus">+</div>
+                    <span>Share Your Game</span>
+                </div>
+            </button>
         </div>
     </div>
 </template>
@@ -40,110 +58,210 @@
 
 <!-- CSS part -->
 <style scoped>
-    .game-title {
-        text-align: center;
-        font-size: 20px;
-        margin: 30px 0;
+    .page {
+        padding: 50px 0;
+        background: radial-gradient(circle at center, #111827 50%, #030712 100%);
     }
 
-    .game-title h2 {
-        border-bottom: 3px solid #4A8DB7;
-        color: #2c3e50;
-        display: inline-block;
-    }
-
-    .game-card-container {
-        text-align: center;
+    .games {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        max-width: 1600px;
+        margin: auto;
     }
 
     .game-card {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-        border: 2px solid #2c3e50;
-        display: inline-block;
-        border-radius: 15px;
-        transition: 0.4s;
+        font-family: 'Poppins', sans-serif;
+        background: rgba(31, 41, 55, 0.7);
+        border-radius: 25px;
         overflow: hidden;
-        width: 300px;
-        margin: 20px 30px 120px 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .game-card:hover {
-        box-shadow: 0 10px 25px rgba(74, 141, 183, 0.3);
-        border-color: #4A8DB7;
-        transform: scale(1.1);
+        transform: translateY(-12px);
+        box-shadow: 0 20px 50px rgba(74, 141, 183, 0.3);
+        border-color: rgba(74, 141, 183, 0.6);
     }
 
     .card-image {
-        border-bottom: 3px solid #2c3e50;
-        background-color: #3b5998;
-        height: 160px;
+        position: relative;
+        height: 300px;
+        overflow: hidden;
     }
 
-    .card-image i {
-        font-size: 75px;
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .game-card:hover .card-image img {
+        transform: scale(1.1);
+    }
+
+    .card-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(30, 41, 59, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .game-card:hover .card-button {
+        opacity: 1;
+    }
+
+    .playButton {
+        background: #4A8DB7;
         color: white;
-        margin-top: 40px;
-    }
-
-    .card-content {
-        padding: 25px;
-    }
-
-    .card-content h3 {
-        color: #1e3d5c;
-        font-size: 23px;
-    }
-
-    .card-content p {
-        font-weight: bold;
-        color: #666;
-    }
-
-    .button {
-        border: 2px solid #4A8DB7;
-        background-color: white;
         text-decoration: none;
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 6px;
+        padding: 12px 25px;
+        border-radius: 30px;
         font-weight: bold;
-        color: #4A8DB7;
-        transition: 0.3s;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
     }
 
-    .button:hover {
-        background-color: #4A8DB7;
-        color: white;
+    .game-card:hover .playButton {
+        transform: translateY(0);
+    }
+
+    .card-info {
+        padding: 20px;
+    }
+
+    .card-info h3 {
+        margin: 0 0 15px 0;
+        color: #f1f5f9;
+        font-size: 25px;
+        letter-spacing: 0.5px;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .tag {
+        background: rgba(74, 141, 183, 0.2);
+        color: #60a5fa;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 1px solid rgba(74, 141, 183, 0.3);
+    }
+
+    .upload-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 2px dashed rgba(74, 141, 183, 0.4);
+        border-radius: 25px;
+        cursor: pointer;
+        min-height: 300px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upload-card:hover {
+        border-color: #4A8DB7;
+        background: rgba(74, 141, 183, 0.1);
+    }
+
+    .upload-content {
+        text-align: center;
+        color: #9eaec5;
+    }
+
+    .plus {
+        font-size: 100px;
+        margin-bottom: 10px;
+        display: block;
+        color: #4A8DB7;
+        transition: transform 0.5s ease;
+    }
+
+    .upload-card:hover .plus {
+        transform: rotate(360deg) scale(1.3);
+    }
+
+    .upload-content span {
+        font-weight: 600;
+        font-size: 22px;
+        color: #94a3b8;
     }
 
     /* Mobile responsiveness */
+    @media (max-width: 1024px) {
+        .games {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            padding: 0 20px;
+        }
+    }
+
     @media (max-width: 768px) {
+        .page {
+            padding: 30px 10px;
+        }
+
+        .games {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
 
         .game-card {
-            width: 90%;
-            margin: 20px auto;
-            display: block;
-            max-width: 350px;
+            max-width: 500px;
+            margin: 0 auto;
         }
 
-        .game-card:hover {
-            transform: scale(1.05);
+        .card-image {
+            height: 250px;
         }
 
-        .card-image img {
-            width: 100%;
-            height: auto;
+        .card-info h3 {
+            font-size: 20px;
+        }
+
+        .plus {
+            font-size: 80px;
+        }
+
+        .upload-content span {
+            font-size: 18px;
+        }
+
+        .card-button {
+            background: rgba(30, 41, 59, 0.4);
+            opacity: 1;
+        }
+
+        .playButton {
+            transform: translateY(0);
+            padding: 10px 20px;
         }
     }
 
     @media (max-width: 480px) {
-
-        .game-title h2 {
-            font-size: 1.2rem;
+        .card-image {
+            height: 200px;
         }
 
-        .card-content h3 {
-            font-size: 18px;
+        .game-card {
+            border-radius: 15px;
         }
     }
 </style>
