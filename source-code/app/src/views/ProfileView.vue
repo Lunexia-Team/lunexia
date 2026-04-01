@@ -1,3 +1,6 @@
+<!-- Profile View component -->
+
+<!-- HTML part -->
 <template>
     <HeroSection>
         <h1>My Profile</h1>
@@ -21,6 +24,7 @@
     </div>
 </template>
 
+<!-- JavaScript part -->
 <script setup>
     import { ref, onMounted, computed } from 'vue';
     import axios from 'axios';
@@ -69,6 +73,7 @@
     onMounted(fetchProfile);
 </script>
 
+<!-- CSS part -->
 <style scoped>
     .page {
         padding: 80px 20px;
@@ -152,5 +157,37 @@
         font-size: 14px;
         color: #94a3b8;
         margin-top: 5px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+        .page {
+            padding: 20px 15px;
+        }
+
+        .profile-card {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 20px;
+            gap: 20px;
+        }
+
+        .profile-info {
+            align-items: center;
+        }
+
+        .profile-picture {
+            width: 140px;
+            height: 140px;
+        }
+
+        .full-name {
+            font-size: 22px !important;
+        }
+
+        .logout-btn {
+            width: 100%;
+            max-width: 200px;
+        }
     }
 </style>

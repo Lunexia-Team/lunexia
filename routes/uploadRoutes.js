@@ -1,4 +1,4 @@
-// ? Upload routes for uploading and managing games
+// ? Upload routes for uploading games
 
 // * Requirements
 const express = require("express");
