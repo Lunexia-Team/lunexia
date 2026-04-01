@@ -3,10 +3,8 @@
         <h1>My Profile</h1>
         <p>You can manage your developer account and games from here.</p>
     </HeroSection>
-
     <div class="page">
         <div v-if="loading" class="status-msg">Loading Profile...</div>
-
         <div class="profile-card" v-else-if="userData">
             <img class="profile-picture" src="../assets/profile.jpg" alt="Profile Picture">
 
@@ -19,7 +17,6 @@
                 <button @click="logout" class="logout-btn">Log Out</button>
             </div>
         </div>
-
         <div v-else class="status-msg error">User not found.</div>
     </div>
 </template>
@@ -33,6 +30,7 @@
     const router = useRouter();
     const userData = ref(null);
     const loading = ref(true);
+
     const API_URL = 'https://project-lunexia.onrender.com';
 
     const currentUsername = localStorage.getItem('activeUsername');
