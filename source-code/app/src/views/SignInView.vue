@@ -39,7 +39,7 @@
     const password = ref('');
     const router = useRouter();
 
-    const API_URL = 'http://localhost:3000';
+    const API_URL = 'https://project-lunexia.onrender.com';
 
     // Function to handle login
     const handleLogin = async () => {
