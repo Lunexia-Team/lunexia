@@ -19,86 +19,102 @@
 <!-- CSS part -->
 <style scoped>
     .navbar {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        border-bottom: 4px solid #1a252f;
-        background-color: #2c3e50;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(5px);
         text-align: center;
         font-weight: bold;
         position: sticky;
-        font-size: 16px;
-        padding: 10px 20px;
         z-index: 1000;
-        margin: 0;
         top: 0;
+    }
+
+    .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 25px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
     }
 
     .navbar li {
         display: inline-block;
-        padding: 0 30px;
+        margin: 0 15px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .navbar li:hover {
+        background-color: #255783;
+        border-color: #3498db;
+        box-shadow: 0 4px 12px rgba(52, 143, 199, 0.3);
     }
 
     .navbar li a {
         text-decoration: none;
         color: white;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 10px 20px;
+        display: inline-block;
     }
 
-    .navbar li a:hover {
-        color: #4A8DB7;
+    .navbar li a::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
         transition: 0.4s;
     }
 
-    @media (max-width: 768px) {
-
-        .navbar {
-            padding: 15px 5px;
-        }
-
-        .navbar li {
-            display: inline-block;
-            padding: 5px 10px;
-        }
-
-        .navbar li a {
-            font-size: 22px;
-        }
+    .navbar li a:hover::after {
+        width: 100%;
+        background-color: #3498db;
     }
 
     /* Mobile responsiveness */
-    @media (max-width: 480px) {
-        .navbar {
-            width: 100%;
-            padding: 5px 0;
-        }
-
+    @media (max-width: 768px) {
         .navbar ul {
-            display: flex;
             flex-direction: column;
-            padding: 0;
-            margin: 0;
-            width: 100%;
+            gap: 8px;
+            padding: 10px 0;
         }
 
         .navbar li {
-            display: block;
-            width: 100%;
-            padding: 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 0 40px;
+            border-radius: 15px;
         }
 
         .navbar li a {
+            font-size: 18px;
+            padding: 6px 12px;
             display: block;
-            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navbar ul {
             padding: 8px 0;
-            font-size: 14px;
-            line-height: 1.2;
+            gap: 5px;
+        }
+
+        .navbar li a {
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+            border-width: 1px;
         }
 
         .navbar li a i {
+            font-size: 14px;
             margin-right: 5px;
-        }
-
-        .navbar li:last-child {
-            border-bottom: none;
         }
     }
 </style>

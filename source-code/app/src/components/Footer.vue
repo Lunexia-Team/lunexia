@@ -7,14 +7,14 @@
         <div class="footer-team">
             <div class="member">
                 <span>Güray Topağaç</span>
-                <a href="https://www.instagram.com/guraytopagac/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
+                <a href="https://github.com/guraytopagac" target="_blank">
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </div>
             <div class="member">
                 <span>Mehmet Emin Yıldırım</span>
-                <a href="https://www.instagram.com/mehmet.emin_yldrm/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
+                <a href="https://github.com/MehmetEmin61" target="_blank">
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </div>
         </div>
@@ -30,68 +30,81 @@
 <!-- CSS part -->
 <style scoped>
     .footer {
-        background-color: #1a252f;
-        padding: 5px 0 20px 0;
+        background-color: #0f172a;
+        padding: 10px 0 20px 0;
         text-align: center;
-        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(52, 143, 199, 0.2);
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
     }
 
     .footer-title {
-        color: #4A8DB7;
-        font-size: 15px;
+        color: #3498db;
+        font-size: 16px;
         text-transform: uppercase;
-        letter-spacing: 5px;
-        margin-bottom: 20px;
-        font-weight: bold;
-        opacity: 0.9;
+        letter-spacing: 4px;
+        margin-bottom: 25px;
+        font-weight: 800;
     }
 
     .footer-team {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
-        margin: 10px;
+        gap: 12px;
+        margin-bottom: 30px;
     }
 
     .member {
         display: flex;
         align-items: center;
-        gap: 12px;
-        color: #ecf0f1;
-        transition: transform 0.3s ease;
+        gap: 15px;
+        color: #f8fafc;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 8px 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .member:hover {
+        background: rgba(52, 143, 199, 0.1);
+        border-color: rgba(52, 143, 199, 0.3);
+        transform: translateY(-2px);
     }
 
     .member span {
-        font-size: 16px;
-        font-weight: 500;
-        min-width: 180px;
+        font-size: 20px;
+        font-weight: 600;
+        min-width: 160px;
+        letter-spacing: 0.5px;
     }
 
     .member a {
-        color: #bdc3c7;
-        font-size: 20px;
+        color: #3498db;
+        font-size: 25px;
         transition: all 0.3s ease;
         display: flex;
         text-decoration: none;
     }
 
     .member a:hover {
-        color: #4A8DB7;
-        transform: scale(1.2);
+        color: #009ffc;
+        filter: drop-shadow(0 0 8px rgba(0, 159, 252, 0.6));
+        transform: scale(1.1);
     }
 
     .footer-copy {
         border-top: 1px solid rgba(255, 255, 255, 0.05);
         padding-top: 20px;
+        max-width: 80%;
         margin: 0 auto;
     }
 
     .footer-copy p {
-        font-size: 11px;
-        color: #5d6d7e;
+        font-size: 16px;
+        color: #64748b;
         margin: 0;
-        text-transform: uppercase;
+        font-weight: 500;
         letter-spacing: 1px;
     }
 
