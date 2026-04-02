@@ -4,7 +4,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-require('dotenv').config({ quiet: true ,path: path.join(__dirname, '.env') });
+require('dotenv').config({ quiet: true ,path: path.join(__dirname, '../.env') });
 
 // * Shortcut
 const app = express();
@@ -29,13 +29,9 @@ app.use("/api/signin", signInRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/users", userRoutes);
 
-// * Static files for Vue app and game source files
+// * Serve static files from the Vue app's dist directory
 const distPath = path.join(__dirname, "..", "client", "dist");
-const gamesPath = path.join(__dirname, "..", "client", "public", "gameSource");
-
 app.use(express.static(distPath));
-app.use("/games/DTL", express.static(path.join(gamesPath, "DTL")));
-app.use("/games/AT", express.static(path.join(gamesPath, "AT")));
 
 // * Serve index.html for all non-API GET requests to support client-side routing in Vue
 app.use((req, res, next) => {
