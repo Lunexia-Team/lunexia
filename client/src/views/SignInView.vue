@@ -31,8 +31,8 @@
 <!-- JavaScript part -->
 <script setup>
     import HeroSection from '../components/HeroSection.vue';
-    import { ref } from 'vue';
     import axios from 'axios';
+    import { ref } from 'vue';
     import { useRouter } from 'vue-router';
 
     const email = ref('');

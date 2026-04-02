@@ -63,6 +63,7 @@
     import HeroSection from '../components/HeroSection.vue';
     import axios from 'axios';
     import { ref } from 'vue';
+    import { useRouter } from 'vue-router';
 
     const firstName = ref('');
     const lastName = ref('');
@@ -71,6 +72,7 @@
     const email = ref('');
     const password = ref('');
     const birthDate = ref(null);
+    const router = useRouter();
 
     const API_URL = 'https://project-lunexia.onrender.com';
 
