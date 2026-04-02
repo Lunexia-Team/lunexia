@@ -1,0 +1,15 @@
+// ? This file is used to recommend extensions for the project when opened in VS Code
+
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "ecmel.vscode-html-css",
+    "xabikos.javascriptsnippets",
+    "vue.volar",
+    "tomoki1207.pdf",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv"
+  ]
+}
