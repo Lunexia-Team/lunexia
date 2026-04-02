@@ -1,10 +1,10 @@
 // ? Main server file for the project
 
 // * Requirements
-require('dotenv').config({ quiet: true });
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+require('dotenv').config({ quiet: true ,path: path.join(__dirname, '.env') });
 
 // * Shortcut
 const app = express();
