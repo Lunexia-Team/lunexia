@@ -99,12 +99,14 @@
             router.push('/signin');
         } catch (error) {
             if (error.response) {
-                console.error("Error Data:", error.response.data);
-                alert(error.response.data.error || "An error occurred.");
-            }
-            else {
-                console.error("Connection Error:", error.message);
-                alert("Could not connect to the server.");
+                console.error("Server Error:", error.response.data);
+                alert(error.response.data.error || "Server error occurred. Please try again.");
+            } else if (error.request) {
+                console.error("Network Error:", error.request);
+                alert("Unable to reach the server. Please check your internet connection or the API address.");
+            } else {
+                console.error("Code Error:", error.message);
+                alert("Software error occurred: " + error.message);
             }
         }
     }

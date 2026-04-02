@@ -20,7 +20,7 @@
 <style>
     .hero {
         background: linear-gradient(to bottom, #1e293b 0%, #111827 100%);
-        padding: 60px 20px;
+        padding: 30px 0;
         text-align: center;
         color: white;
         position: relative;

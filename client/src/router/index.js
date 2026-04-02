@@ -16,6 +16,11 @@ const router = createRouter({
             component: () => import('../views/GamesView.vue')
         },
         {
+            path: '/games/:slug', 
+            component: () => import('../views/UnityGameView.vue'),
+            props: true
+        },
+        {
             path: '/upload',
             component: () => import('../views/UploadView.vue')
         },
