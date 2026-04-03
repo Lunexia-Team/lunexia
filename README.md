@@ -2,8 +2,8 @@
 
 <p align="center">
   <img src="assets/lunexia-demo.gif" alt="Lunexia Demo" width="800">
+  <kbd>✨ You can view it live by clicking on the image.</kbd>
 </p>
-
 ---
 
 ## 🔗 Quick Access
