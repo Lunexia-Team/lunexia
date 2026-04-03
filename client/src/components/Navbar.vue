@@ -79,6 +79,10 @@
 
     /* Mobile responsiveness */
     @media (max-width: 768px) {
+        .navbar {
+            top: auto;
+        }
+
         .navbar ul {
             flex-direction: column;
             gap: 8px;
@@ -98,6 +102,10 @@
     }
 
     @media (max-width: 480px) {
+        .navbar {
+            top: auto;
+        }
+
         .navbar ul {
             padding: 8px 0;
             gap: 5px;
