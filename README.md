@@ -1,9 +1,7 @@
 # 🎓 SENG 204 Final Project
 
-[<img width="1284" height="924" alt="image" src="https://github.com/user-attachments/assets/034fe6f0-8357-4c0a-93ff-521c10471554" />](https://project-lunexia.onrender.com)
-
 <p align="center">
-  <kbd>✨ You can view it live by clicking on the image.</kbd>
+  <img src="assets/lunexia-demo.gif" alt="Lunexia Demo" width="800">
 </p>
 
 ---
