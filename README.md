@@ -14,11 +14,6 @@
 
 ---
 
-## 👥 Contributors
-
-*   **Güray Topağaç** - [GitHub Profile](https://github.com/guraytopagac)
-*   **Mehmet Emin Yıldırım** - [GitHub Profile](https://github.com/MehmetEmin61)
-
 ## ⚡ About the Project
 
 **Lunexia** is a modern **indie game distribution platform** designed to bridge the gap between independent developers and gamers. Developed as a final project for SENG 204, this platform allows users to discover new titles and manage their favorite indie games through a seamless interface. 
@@ -35,21 +30,17 @@
 *   **Responsive Design:** Fully compatible with both desktop and mobile devices.
 *   **Database Integration:** Dynamic content management using MongoDB.
 
+```md
+## 📸 Screenshots
 
-## 🗂 Project File Structure
+### Home Page
+![Home](assets/Home.png)
 
-```bash
-lunexia/
-├── client/                # Frontend source code built with Vue.js
-├── server/                # Backend API and database logic built with Node.js & Express
-├── .env.example           # Template for environment variables (Port, MongoDB URI, etc.)
-├── .gitignore             # Files and directories to be ignored by Git
-├── LICENSE                # Project license information
-├── README.md              # Project documentation and setup guide
-├── package-lock.json      # Locked versions of project dependencies
-└── package.json           # Project metadata, scripts, and dependency list
-```
----
+### Game Library
+![Library](assets/Games.png)
+
+### Upload Page
+![Upload](assets/Profile.png)
 
 ## 🛠 Technologies Used
 
@@ -62,25 +53,39 @@ lunexia/
 | **Distribution** | ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) |
 
 ---
-## 🗄 Database Configuration
 
-MongoDB is used in this project.
+## 🧠 System Architecture
 
-Before running the project:
+The system follows a client-server architecture:
 
-1. Create a `.env` file in the project root directory.
-2. Define this file by referencing the `.env.example` file.
-3. Ensure that the MongoDB service is running.
+- **Frontend:** Vue.js (Single Page Application)
+- **Backend:** Node.js + Express (REST API)
+- **Database:** MongoDB
+- **Communication:** HTTP (RESTful APIs)
 
-Note: The `.env` file has not been added to the repository for security reasons.
 
+## 🗂 Project Structure
+
+```bash
+lunexia/
+├── assets/                # Media files and screenshots used in documentation
+├── client/                # Frontend source code built with Vue.js
+├── server/                # Backend API and database logic built with Node.js & Express
+├── .env.example           # Template for environment variables (Port, MongoDB URI, etc.)
+├── .gitignore             # Files and directories to be ignored by Git
+├── LICENSE                # Project license information
+├── README.md              # Project documentation and setup guide
+├── package-lock.json      # Locked versions of project dependencies
+└── package.json           # Project metadata, scripts, and dependency list
+```
+---
 
 ## 🚀 Installation and Setup
 
 1. Clone the repository:
    
    ```bash
-   git clone [https://github.com/Lunexia-Team/lunexia.git](https://github.com/Lunexia-Team/lunexia.git)
+   git clone https://github.com/Lunexia-Team/lunexia.git
    
 2. Enter the project directory:
    
@@ -101,3 +106,20 @@ Note: The `.env` file has not been added to the repository for security reasons.
    
    ```bash
    http://localhost:3000
+
+## 🗄 Database Configuration
+
+MongoDB is used in this project.
+
+Before running the project:
+
+1. Create a `.env` file in the project root directory.
+2. Define this file by referencing the `.env.example` file.
+3. Ensure that the MongoDB service is running.
+
+Note: The `.env` file has not been added to the repository for security reasons.
+
+## 👥 Contributors
+
+- [Güray Topağaç](https://github.com/guraytopagac)
+- [Mehmet Emin Yıldırım](https://github.com/MehmetEmin61)
