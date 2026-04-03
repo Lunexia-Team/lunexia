@@ -1,4 +1,4 @@
-# 🎓 SENG 204 Final Project
+p# 🎓 SENG 204 Final Project
 
 <p align="center">
   <img src="assets/lunexia-demo.gif" alt="Lunexia Demo" width="800">
@@ -38,10 +38,10 @@
 ### Home Page
 ![Home](assets/Home.png)
 
-### Game Library
+### Games Page
 ![Library](assets/Games.png)
 
-### Upload Page
+### Profile Page
 ![Upload](assets/Profile.png)
 
 ---
