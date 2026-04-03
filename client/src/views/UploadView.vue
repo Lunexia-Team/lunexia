@@ -133,7 +133,7 @@
     }
 
     .form-header i {
-        font-size: 40px;
+        font-size: 50px;
         color: #4A8DB7;
         margin-bottom: 15px;
         filter: drop-shadow(0 0 10px rgba(74, 141, 183, 0.5));
@@ -142,13 +142,12 @@
 
     .form-header i:hover {
         transform: scale(1.2);
-        color: #4A8DB7;
         filter: drop-shadow(0 0 20px rgba(74, 141, 183, 0.5));
     }
 
     .form-header h3 {
         color: #ffffff;
-        font-size: 24px;
+        font-size: 25px;
         letter-spacing: 1px;
         margin: 0;
     }
