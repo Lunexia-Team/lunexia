@@ -30,7 +30,6 @@
 *   **Responsive Design:** Fully compatible with both desktop and mobile devices.
 *   **Database Integration:** Dynamic content management using MongoDB.
 
-```md
 ## 📸 Screenshots
 
 ### Home Page
