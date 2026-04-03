@@ -1,4 +1,4 @@
-p# 🎓 SENG 204 Final Project
+## 🎓 SENG 204 Final Project
 
 <p align="center">
   <img src="assets/lunexia-demo.gif" alt="Lunexia Demo" width="800">
