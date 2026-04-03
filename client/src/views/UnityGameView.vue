@@ -131,7 +131,7 @@
         background: radial-gradient(circle at center, #111827 50%, #030712 100%);
         padding: 20px;
     }
-    
+
     .unity-wrapper {
         position: relative;
         width: 100%;
@@ -206,5 +206,60 @@
 
     .fade-leave-to {
         opacity: 0;
+    }
+
+    @media (max-width: 1024px) {
+        .unity-wrapper {
+            max-width: 95%;
+            aspect-ratio: 16 / 9;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .page {
+            padding: 10px;
+            min-height: 60vh;
+        }
+
+        .unity-wrapper {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 4px;
+            aspect-ratio: 4 / 3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .unity-logo {
+            width: 100px;
+            height: 85px;
+        }
+
+        .progress-empty {
+            width: 150px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .unity-wrapper {
+            aspect-ratio: 1 / 1;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        .page {
+            padding: 0;
+        }
+
+        .unity-wrapper {
+            aspect-ratio: 16 / 9;
+            height: 100vh;
+            width: auto;
+            border-radius: 0;
+        }
     }
 </style>
