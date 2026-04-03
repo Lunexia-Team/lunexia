@@ -4,6 +4,7 @@
   <img src="assets/lunexia-demo.gif" alt="Lunexia Demo" width="800">
   <kbd>✨ You can view it live by clicking on the image.</kbd>
 </p>
+
 ---
 
 ## 🔗 Quick Access
@@ -30,6 +31,8 @@
 *   **Responsive Design:** Fully compatible with both desktop and mobile devices.
 *   **Database Integration:** Dynamic content management using MongoDB.
 
+---
+
 ## 📸 Screenshots
 
 ### Home Page
@@ -40,6 +43,8 @@
 
 ### Upload Page
 ![Upload](assets/Profile.png)
+
+---
 
 ## 🛠 Technologies Used
 
@@ -62,6 +67,7 @@ The system follows a client-server architecture:
 - **Database:** MongoDB
 - **Communication:** HTTP (RESTful APIs)
 
+---
 
 ## 🗂 Project Structure
 
@@ -106,6 +112,8 @@ lunexia/
    ```bash
    http://localhost:3000
 
+---
+
 ## 🗄 Database Configuration
 
 MongoDB is used in this project.
@@ -117,6 +125,8 @@ Before running the project:
 3. Ensure that the MongoDB service is running.
 
 Note: The `.env` file has not been added to the repository for security reasons.
+
+---
 
 ## 👥 Contributors
 
